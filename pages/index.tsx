@@ -10,6 +10,7 @@ import {
   useSessionContext,
 } from 'supertokens-auth-react/recipe/session'
 import { redirectToAuth } from 'supertokens-auth-react'
+import WunderGraphComponentAfterLoggedIn from './WunderGraphComponentAfterLoggedIn'
 
 export async function getServerSideProps(context) {
   // this runs on the backend, so we must call init on supertokens-node SDK
@@ -177,14 +178,17 @@ function ProtectedPage({ userId }) {
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
+      <WunderGraphComponentAfterLoggedIn />
     </div>
   )
 }
 
-export default function Home(props) {
+function Home(props) {
   return (
     <SessionAuth>
       <ProtectedPage userId={props.userId} />
     </SessionAuth>
   )
 }
+
+export default Home;

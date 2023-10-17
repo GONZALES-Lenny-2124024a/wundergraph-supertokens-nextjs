@@ -14,6 +14,7 @@ export default async function superTokens(req, res) {
         'Cache-Control',
         'no-cache, no-store, max-age=0, must-revalidate'
       )
+
       await middleware()(req, res, next)
     },
     req,

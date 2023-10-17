@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../wundergraph.server.ts"],
+  "sourcesContent": ["import { configureWunderGraphServer } from '@wundergraph/sdk/server';\n\nexport default configureWunderGraphServer(() => ({\n\thooks: {\n\t\tglobal: {\n\t\t\thttpTransport: {\n\t\t\t\tonOriginRequest: {\n\t\t\t\t\tenableForAllOperations: true,\n\t\t\t\t\thook: async ({ request, user }) => {\n\t\t\t\t\t\tif (user && user.rawIdToken) {\n\t\t\t\t\t\t\trequest.headers.set('Authorization', `Bearer ${user.rawIdToken}`);\n\t\t\t\t\t\t}\n\t\t\t\t\t\treturn request;\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t},\n\t\tqueries: {},\n\t\tmutations: {},\n\t},\n\tgraphqlServers: [],\n}));\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAA2C;AAE3C,IAAO,iCAAQ,0CAA2B,OAAO;AAAA,EAChD,OAAO;AAAA,IACN,QAAQ;AAAA,MACP,eAAe;AAAA,QACd,iBAAiB;AAAA,UAChB,wBAAwB;AAAA,UACxB,MAAM,OAAO,EAAE,SAAS,KAAK,MAAM;AAClC,gBAAI,QAAQ,KAAK,YAAY;AAC5B,sBAAQ,QAAQ,IAAI,iBAAiB,UAAU,KAAK,YAAY;AAAA,YACjE;AACA,mBAAO;AAAA,UACR;AAAA,QACD;AAAA,MACD;AAAA,IACD;AAAA,IACA,SAAS,CAAC;AAAA,IACV,WAAW,CAAC;AAAA,EACb;AAAA,EACA,gBAAgB,CAAC;AAClB,EAAE;",
+  "names": []
+}

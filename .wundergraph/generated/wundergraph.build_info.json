@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "sdk": {
+    "version": "0.179.2"
+  },
+  "wunderctl": {
+    "version": "0.176.0"
+  },
+  "node": {
+    "version": "v19.0.0"
+  },
+  "os": {
+    "type": "Darwin",
+    "platform": "darwin",
+    "arch": "arm64",
+    "version": "Darwin Kernel Version 23.1.0: Tue Oct  3 22:40:46 PDT 2023; root:xnu-10002.41.8~15/RELEASE_ARM64_T8112",
+    "release": "23.1.0"
+  },
+  "stats": {
+    "totalApis": 1,
+    "hasUploadProvider": false,
+    "totalOperations": 4,
+    "totalWebhooks": 0,
+    "hasAuthenticationProvider": true
+  }
+}

@@ -9,7 +9,7 @@ export let backendConfig = (): AuthConfig => {
   return {
     framework: 'express',
     supertokens: {
-      connectionURI: 'https://try.supertokens.io',
+      connectionURI: 'http://localhost:3567/',
     },
     appInfo,
     recipeList: [

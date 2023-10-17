@@ -1,17 +1,30 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "run-p dev wundergraph open",
+    "dev": "next dev --port 3003",
+    "wundergraph": "wunderctl up",
+    "open": "wait-on -d 500 http://localhost:9991 && open-cli http://localhost:3003",
+    "wunderctl": "wunderctl",
+    "build": "next build"
   },
   "dependencies": {
+    "@wundergraph/nextjs": "^0.14.7",
+    "@wundergraph/sdk": "^0.179.2",
+    "graphql": "^16.8.1",
     "next": "latest",
+    "next-auth": "^4.23.2",
+    "node-fetch": "^3.3.2",
+    "npm-run-all": "^4.1.5",
+    "open-cli": "^7.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "supertokens-auth-react": "latest",
     "supertokens-node": "latest",
-    "supertokens-web-js": "latest"
+    "supertokens-web-js": "latest",
+    "swr": "^2.2.4",
+    "ts-node": "^10.9.1",
+    "wait-on": "^7.0.1"
   },
   "devDependencies": {
     "@types/node": "18.7.13",

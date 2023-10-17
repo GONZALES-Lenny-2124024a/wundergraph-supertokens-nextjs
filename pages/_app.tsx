@@ -7,6 +7,7 @@ import SuperTokensReact, {
 } from 'supertokens-auth-react'
 import * as SuperTokensConfig from '../config/frontendConfig'
 import Session from 'supertokens-auth-react/recipe/session'
+import { withWunderGraph } from '../components/generated/nextjs'
 
 if (typeof window !== 'undefined') {
   SuperTokensReact.init(SuperTokensConfig.frontendConfig())
@@ -37,4 +38,4 @@ function MyApp({ Component, pageProps }): JSX.Element {
   )
 }
 
-export default MyApp
+export default withWunderGraph(MyApp);
