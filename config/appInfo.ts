@@ -1,11 +1,10 @@
-const port = process.env.APP_PORT || 3003
+const port = process.env.APP_PORT
 
 const apiBasePath = '/api/auth/'
 
 export const websiteDomain =
   process.env.APP_URL ||
-  process.env.NEXT_PUBLIC_APP_URL ||
-  `http://localhost:${port}`
+  process.env.NEXT_PUBLIC_APP_URL
 
 export const appInfo = {
   appName: 'SuperTokens Demo App',

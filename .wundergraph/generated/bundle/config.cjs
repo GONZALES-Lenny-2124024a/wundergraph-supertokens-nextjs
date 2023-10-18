@@ -83,13 +83,13 @@ var countries = import_sdk2.introspect.graphql({
   },
   cors: {
     ...import_sdk2.cors.allowAll,
-    allowedOrigins: ["http://localhost:3003"]
+    allowedOrigins: [`${process.env.NEXT_PUBLIC_APP_URL}`]
   },
   authentication: {
     tokenBased: {
       providers: [
         {
-          jwksURL: "http://localhost:3003/api/auth/jwt/jwks.json"
+          jwksURL: `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/jwt/jwks.json`
         }
       ]
     }

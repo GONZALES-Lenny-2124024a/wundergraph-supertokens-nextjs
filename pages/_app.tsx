@@ -38,8 +38,4 @@ function MyApp({ Component, pageProps }): JSX.Element {
   )
 }
 
-export default withWunderGraph(MyApp, {
-  ssr: true,
-  baseUrl: `${process.env.NEXT_URL}/api/wg`
-
-});
+export default withWunderGraph(MyApp);

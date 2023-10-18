@@ -2,9 +2,9 @@
   "private": true,
   "scripts": {
     "start": "run-p dev wundergraph open",
-    "dev": "next dev --port 3003",
+    "dev": "next dev --port $PORT_TEST_1",
     "wundergraph": "wunderctl up",
-    "open": "wait-on -d 500 http://localhost:9991 && open-cli http://localhost:3003",
+    "open": "wait-on -d 500 $TEST_NEXT_URL_1 && open-cli $PORT_TEST_1",
     "wunderctl": "wunderctl",
     "build": "next build"
   },
