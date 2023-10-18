@@ -20,7 +20,7 @@ export function middleware(request: NextRequest) {
   const headers = new Headers({
     Authorization: `Bearer ${token}`,
   });
-
+  
   // rewrite the request to the WunderGraph API
   const response = NextResponse.rewrite(url, {
     request: {

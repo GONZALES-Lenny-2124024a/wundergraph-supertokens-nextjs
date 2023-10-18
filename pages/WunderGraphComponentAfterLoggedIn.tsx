@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
-import { useAuth, useQuery, useUser } from '../components/generated/nextjs';
+import { useAuth, useQuery, useUser } from "../lib/wundergraph";
+
 
 const WunderGraphComponentAfterLoggedIn: NextPage = () => {
 	const { login } = useAuth();
